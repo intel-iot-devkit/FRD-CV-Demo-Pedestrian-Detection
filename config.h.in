@@ -1,0 +1,2 @@
+#cmakedefine NETWORK_OUTPUT
+#cmakedefine ENABLE_FPGA

@@ -1,0 +1,33 @@
+PEDESTRIAN DETECTION DEMO
+
+First, run:
+----------------------------------------
+$ cd /home/user_name/sto-il-pddemo/build
+$ ./pddemo --list-algos
+----------------------------------------
+to display a list of available algorithms. There will be two possible algorithms, one for running the demo on only the CPU and the other for using an FPGA. If the one you want to show is not on this list, then something went wrong during another part of the build process, or required system libraries aren't properly installed.
+
+Once you know the algorithm you want to run, use the `-a [algorithm]` flag to
+specify it. If no `-a` flag is given, the demo will default to using OpenCV's
+CPU-based pedestrian detection algorithm. To give a file or capture device as
+input, use `./pddemo [flags] file.avi` or `./pddemo [flags] camera`
+respectively.
+
+To get the possible flags, run the help command:
+----------------------------------------
+$ cd /home/user_name/sto-il-pddemo/build
+$ ./pddemo --help
+----------------------------------------
+
+The general command line to run this demo using a .avi file is:
+----------------------------------------------
+$ cd /home/user_name/sto-il-pddemo/build
+$ ./pddemo [flags] /location_of_video/file.avi
+----------------------------------------------
+
+Once the application is running, a window should pop up showing the current
+frame and the active algorithm's results. If no `DISPLAY` variable is present in
+the process's environment or if the `-w` flag is given, it will not atttempt to
+generate a window.
+
+To terminate the demo from running, go back to the terminal and use 'Ctrl-C'.
